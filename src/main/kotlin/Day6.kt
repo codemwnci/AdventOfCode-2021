@@ -62,7 +62,7 @@ class Day6 {
             spawnedFish.add(NewFish(8, newFish))
         }
 
-        val total = spawnedFish.sumOf { it.numNewFish.toLong() } + fish.size
+        val total = spawnedFish.sumOf { it.numNewFish } + fish.size
         println("Total Fish: $total")
     }
 
