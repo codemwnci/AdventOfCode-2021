@@ -6,8 +6,10 @@ fun main() {
 }
 
 class Day1 {
+    private val file = File("inputs/day1.txt")
+
     fun puzzle1() {
-        val file = File("day1.txt")
+
         val lines = file.readLines().map { it.toInt() }
 
         val increases = lines.windowed(2, 1) {
@@ -19,7 +21,6 @@ class Day1 {
     }
 
     fun puzzle2() {
-        val file = File("day1.txt")
         val lines = file.readLines().map { it.toInt() }
 
         val increases = lines.windowed(4, 1) {

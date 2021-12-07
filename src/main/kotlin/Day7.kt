@@ -7,7 +7,7 @@ fun main() {
 }
 
 class Day7 {
-    val crabs = File("day7.txt").readLines().first().split(",").map{it.toInt()}
+    val crabs = File("inputs/day7.txt").readLines().first().split(",").map{it.toInt()}
 
     fun puzzle1() {
         val min = crabs.minOrNull()!!

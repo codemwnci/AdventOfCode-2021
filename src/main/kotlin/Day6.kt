@@ -8,7 +8,7 @@ fun main() {
 
 class Day6 {
 
-    val fish = File("day6.txt").readLines().first().split(",").map{it.toInt()}.toMutableList()
+    val fish = File("inputs/day6.txt").readLines().first().split(",").map{it.toInt()}.toMutableList()
 
     fun puzzle1() {
 

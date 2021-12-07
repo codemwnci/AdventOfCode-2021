@@ -7,7 +7,7 @@ fun main() {
 
 class Day3 {
 
-    val lines = File("day3.txt").readLines()
+    val lines = File("inputs/day3.txt").readLines()
 
     fun puzzle1() {
         val matrix = lines.map { s -> s.toCharArray().map { c -> c.digitToInt() } }

@@ -8,7 +8,7 @@ fun main() {
 
 class Day4 {
 
-    private val lines = File("day4.txt").readLines()
+    private val lines = File("inputs/day4.txt").readLines()
 
     private val drawOrder = lines[0].split(",").map { it.toInt() }
     private val boards = lines.drop(1).windowed(6, 6) {

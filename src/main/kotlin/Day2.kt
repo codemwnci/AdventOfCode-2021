@@ -6,7 +6,7 @@ fun main() {
 }
 
 class Day2 {
-    val lines = File("day2.txt").readLines()
+    val lines = File("inputs/day2.txt").readLines()
 
     fun puzzle1() {
         var horizontal = 0

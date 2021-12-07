@@ -10,7 +10,7 @@ fun main() {
 class Day5 {
     data class Point(val x:Int, val y: Int)
 
-    private val lines = File("day5.txt").readLines()
+    private val lines = File("inputs/day5.txt").readLines()
     private val points = lines.map { line ->
         line.split(" -> ").map { point ->
             val pairs = point.split(",")
