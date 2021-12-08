@@ -44,25 +44,25 @@ class Day8 {
             val eight = inputs.first { it.length == 7 }
             val nine = inputs.first { it.length == 6 && it.containsAll(four) }
 
-            displays.set(one, 1)
-            displays.set(four, 4)
-            displays.set(seven, 7)
-            displays.set(eight, 8)
-            displays.set(nine, 9)
-            displays.set(inputs.first { it.length == 6 && it.containsAll(seven) && !it.containsAll(four) }, 0)
-            displays.set(inputs.first { it.length == 6 && !it.containsAll(one) },  6)
-            displays.set(inputs.first { it.length == 5 && it.containsAll(one) }, 3)
-            displays.set(inputs.first { it.length == 5 && !it.containsAll(one) && nine.containsAll(it) }, 5)
-            displays.set(inputs.first { it.length == 5 && !it.containsAll(one) && !nine.containsAll(it) }, 2)
+            displays[one] = 1
+            displays[four] = 4
+            displays[seven] = 7
+            displays[eight] = 8
+            displays[nine] = 9
+            displays[inputs.first { it.length == 6 && it.containsAll(seven) && !it.containsAll(four) }] = 0
+            displays[inputs.first { it.length == 6 && !it.containsAll(one) }] = 6
+            displays[inputs.first { it.length == 5 && it.containsAll(one) }] = 3
+            displays[inputs.first { it.length == 5 && !it.containsAll(one) && nine.containsAll(it) }] = 5
+            displays[inputs.first { it.length == 5 && !it.containsAll(one) && !nine.containsAll(it) }] = 2
 
-            total += output.split(" ").fold("") { number, outpuVal ->
-                number + displays[outpuVal.sortChars()].toString()
+            total += output.split(" ").fold("") { number, outputVal ->
+                number + displays[outputVal.sortChars()].toString()
             }.toInt()
         }
 
         println(total)
     }
 
-    fun String.sortChars() = this.toCharArray().sorted().joinToString("")
-    fun String.containsAll(chars: String) = this.toList().containsAll(chars.toList())
+    private fun String.sortChars() = this.toCharArray().sorted().joinToString("")
+    private fun String.containsAll(chars: String) = this.toList().containsAll(chars.toList())
 }
