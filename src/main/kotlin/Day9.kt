@@ -48,6 +48,7 @@ class Day9 {
             }.filterNotNull()
         }
 
+        // some of this code inspired by https://github.com/tginsberg/advent-2021-kotlin/blob/master/src/main/kotlin/com/ginsberg/advent2021/Day09.kt
         fun getBasinSize(p: Point): Int {
             val visited = mutableSetOf(p)
             val queue = mutableListOf(p)
