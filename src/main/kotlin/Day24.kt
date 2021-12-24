@@ -1,7 +1,8 @@
 import java.io.File
 
-// Technically this works - but it is incredibly slow
-
+// Technically this works - but it is incredibly slow (even with the chunk-based optimisations)
+// Companion object would be better extracting to a separate object (ALU maybe)
+// May attempt to refactor and optimise
 fun main() {
     Day24().part1()
     Day24().part2()
