@@ -11,26 +11,13 @@ class Day1 {
     fun puzzle1() {
 
         val lines = file.readLines().map { it.toInt() }
-
-        val increases = lines.windowed(2, 1) {
-            if (it[1] > it[0] ) 1
-            else 0
-        }.sum()
-
+        val increases = lines.windowed(2, 1).count { it[1] > it[0] }
         println(increases)
     }
 
     fun puzzle2() {
         val lines = file.readLines().map { it.toInt() }
-
-        val increases = lines.windowed(4, 1) {
-            val w1 = it[0]+it[1]+it[2]
-            val w2 = it[1]+it[2]+it[3]
-
-            if (w2 > w1 ) 1
-            else 0
-        }.sum()
-
+        val increases = lines.windowed(4, 1).count { it[1]+it[2]+it[3] > it[0]+it[1]+it[2] }
         println(increases)
     }
 }
